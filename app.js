@@ -39,7 +39,7 @@ app.use(require("express-session")({
 
 
 // Connect Mongoose
-mongoose.connect("mongodb://localhost/yelpCampV11", function(){
+mongoose.connect("mongodb://localhost/serenpityV13", function(){
     
     console.log("The database 'yelpCamp' was initialized");
 }); 
