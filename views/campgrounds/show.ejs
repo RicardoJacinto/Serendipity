@@ -1,0 +1,109 @@
+<% include ../partials/header %>
+
+<div class = "container">
+ <div class = "row ">
+  <div class= "col-md-3">
+    <p id="title-show" class = "lead">Serendipity!</p>
+    <div class = " list-group">
+      <li class = "list-group-item active">Info 1</li>
+      <li class = "list-group-item">Info 2</li>
+      <li class = "list-group-item">Info 3</li>
+    </div>
+  </div>
+   <div class = "col-md-9">
+      <div class = "thumbnail" id="thumbnail-show">
+          <img class="img-responsive" src="<%= campground.image %>"></image>
+          <div class = "caption-full">
+           <h4 class = "pull-right">£10.00/night </h4>
+           <h4> <strong><%= campground.name %></strong></h4>
+           <p><%= campground.description %></p>
+           <p><h5><em> Published by <strong> <%= campground.author.username %> </strong> </em> 
+          <%  if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+           <div class = "pull-right">
+          <a class = "btn btn-md btn-warning" href = "/campgrounds/<%= campground._id %>/edit"> Edit </a>
+           <form id ="displayInline" action ="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
+                <button type="submit" class = "btn btn-md btn-danger">Delete</button>
+           </form>
+           
+           </div> </h5> </p>
+           <% } %>
+           
+           
+          </div>
+      </div>
+      
+      <div class ="well" id="comment-well">
+     
+           <span class="pull-left"><h4> Share your opinion with the world <i class="fa fa-commenting" aria-hidden="true"></i> </h4></span>
+           <div class = "text-right">
+           <button type ="button" id ="add-comment" class="btn btn-primary btn-md">Post a comment</button>
+            </div>
+           <!-- sliding comment section -->
+           <div class ="form-toggle">
+           
+               <div class = "container text-center">
+               
+                  <div class = "form-comment">
+                   <hr>  
+                     <form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+                        
+                         <div class ="form-group">
+                            <input class ="form-control" type="text" placeholder="Write a comment" name ="comment[text]">
+                        </div>
+                         
+                        
+                        <div class ="form-group">
+                            <button class="btn btn-primary btn-sm btn-block">Submit Comment</button>
+                            
+                        </div>
+                    
+                     </form>
+                   </div>
+                    
+                </div>
+                
+               </div>
+
+         
+        
+       
+       <hr> 
+       
+           <% campground.comments.forEach(function(comment){ %>
+           
+            <div class = "row">
+               <div class = "col-md-12">
+               <strong> <%= comment.author.username %></strong>
+                <span class = "pull-right"> 10 days ago </span>
+                 <div id="comment-styling"> <%= comment.text %> 
+                 <%  if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                  <form  id="displayInline" action="/campgrounds/<%= campground._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+                 <span id ="edit-btn-spacing" class ="pull-right"> <button class="btn btn-xs btn-danger" type = "submit">Delete</button> </span>
+                 </form>
+                 <span id ="edit-btn-spacing" class ="pull-right"> <a href="/campgrounds/<%=campground._id%>/comments/<%=comment._id%>/edit" class="btn btn-xs btn-warning" type = "Submit">Edit</a> </span>
+                 <% } %>
+                 </div>
+                 </div>
+      
+                 
+              </div>
+ 
+                <% }); %>
+                
+            </div>
+    
+     
+               
+     
+           
+      </div>
+      
+    </div> 
+   </div>
+ </div>
+ 
+
+<a href="/campgrounds">Return to campgrounds</a>
+
+
+<% include ../partials/footer %>

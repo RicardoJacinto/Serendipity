@@ -1,0 +1,293 @@
+
+/* General */
+
+.container.text-center{
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+
+*{
+    font-family: 'Quicksand', sans-serif;
+ }
+a{
+    color:white;
+}
+
+body{
+  
+  background: url("https://static.pexels.com/photos/67440/pexels-photo-67440.jpeg") no-repeat center center fixed; 
+ 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  transition: background 6s;
+  background-size: cover;
+ 
+  
+    
+
+}
+
+/* Navbar - Adjust that margin on the top*/
+
+.navbar.navbar-default{
+    margin-bottom: 0px;
+     border-radius: 0px;
+    
+}
+/* Index.ejs */
+
+#content-title{
+    padding-bottom:1%;
+    color: white;
+    padding-right: 3%;
+    display: none;
+    
+}
+
+.content-title{
+    
+    width:100%;
+    background: rgba(255, 102, 0, 0.5);
+}
+#content-title h3{
+ text-transform: uppercase;
+ 
+ 
+}
+
+
+
+
+.jumbotron {
+  margin-bottom: 0px;
+  background: rgba(0, 0, 0, 0.7); 
+  
+   -webkit-box-shadow: 5px 5px 16px 0px rgba(48, 50, 50, 0.98);
+    -moz-box-shadow:    5px 5px 16px 0px rgba(48, 50, 50, 0.98);
+    box-shadow:         5px 5px 16px 0px rgba(48, 50, 50, 0.98);
+}
+
+.jumbotron .container {
+    left: 10px;
+    color: #f2f2f2;
+    
+    
+
+}
+
+.jumbotron .container i {
+   color:#ff6600;
+}
+
+.jumbotron .container h2{
+    text-shadow: 1px 1px #ff0000;
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+}
+
+.jumbotron .container p {
+    padding-top: 10px;
+    font-size: 1.3em;
+}
+
+    
+
+.thumbnail-toggle{
+     display: none;
+}
+
+#thumbnail-index{ 
+    
+    
+    background: rgb(240, 240, 240); 
+    margin-top: 8%;
+    margin-bottom: 8%
+    -webkit-box-shadow: 5px 5px 16px 0px rgba(48, 50, 50, 0.98);
+    -moz-box-shadow:    5px 5px 16px 0px rgba(48, 50, 50, 0.98);
+    box-shadow:         5px 5px 16px 0px rgba(48, 50, 50, 0.98);
+    
+   
+    
+
+}
+
+#thumbnail-index .caption h4{
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+.content-index{
+   background: rgba(0,0,0,0.7);
+    -webkit-box-shadow: 5px -2px 16px 0px rgba(48, 50, 50, 0.98);
+    -moz-box-shadow:    5px -2px 16px 0px rgba(48, 50, 50, 0.98);
+    box-shadow:         5px -2px 16px 0px rgba(48, 50, 50, 0.98);
+
+
+}
+
+.thumbnail img{
+    width:400px; 
+    height:150px;
+    border-radius: 2%;
+   
+}
+
+
+
+#thumbnail-show{
+    margin-top: 5%;
+    color:black;
+}
+
+#thumbnail-show img{
+     width:100%; 
+    height:500px;
+    border-radius: 3px;
+}
+
+#title-show{
+    padding-top: 20px;
+    color: white;
+}
+
+.thumbnail .caption-full{
+    padding: 9px;
+}
+
+/* Flash messages */
+
+/* Correct Margin */
+
+
+
+.flash-messages .alert.alert-danger{
+    margin-bottom: 0px;
+    border-radius: 0px;
+    opacity: 0.9;
+}
+
+.flash-messages .alert.alert-success{
+    margin-bottom: 0px;
+     border-radius: 0px;
+     opacity: 0.9;
+}
+
+
+
+/*login */
+
+#forms h1{
+    color: white;
+}
+
+#forms p {
+    color: white;
+
+}
+
+a:hover{
+    color: yellow;
+}
+
+.form-input{
+       
+      width: 20%;
+      margin: 30px auto;
+}
+
+.form-input .btn.btn-primary.btn-lg.btn-block{
+    text-transform: uppercase;
+}
+
+
+/* Some extra styling like shadow-box, text-shadow*/
+
+#extra-form-input{
+    
+    -webkit-box-shadow: 5px 5px 16px 0px rgba(48, 50, 50, 0.98);
+    -moz-box-shadow:    5px 5px 16px 0px rgba(48, 50, 50, 0.98);
+    box-shadow:         5px 5px 16px 0px rgba(48, 50, 50, 0.98);
+}
+
+
+/* show page - comments slidding down  */
+
+.form-toggle{
+ display: none;
+ margin-top: 30px;
+}
+
+.form-toggle .container.text-center{
+
+    background: transparent;
+}
+
+ 
+  .form-comment button{
+     margin: 0 auto;
+     text-align: center;
+     text-transform: uppercase;
+     
+ }
+
+.img-responsive {
+    width: 100%;
+}
+
+
+
+.user-warning{
+    
+    color:#778899;
+    width: 30%;
+    margin: 10px auto;
+}
+
+.back-fix{
+    
+    width: 30%;
+    margin: 1px auto;
+    padding-left: 100px;
+    
+}
+
+
+
+
+
+#fix_btn{
+ margin-bottom: 20px;   
+}
+
+.caption-full h5 {
+ padding-bottom: 5px;   
+}
+
+#displayInline{
+    display: inline;
+}
+
+
+
+#comment-styling{
+    
+    margin-bottom: 15px;
+}
+
+.well{
+     background: rgba(240, 240, 240, 0.85); 
+}
+
+
+
+
+#edit-btn-spacing{
+    padding-left: 8px;
+    margin-top: 5px;
+}
+
+
+

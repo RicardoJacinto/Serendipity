@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Serendipity! </title>
+    <!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">        -->  
+         <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Pacifico|Quicksand" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>
+      
+
+        
+    </head>
+    <body>
+    
+    <nav class ="navbar navbar-default">
+   <div class="container-fluid">
+        <div class="navbar-header">
+         <a class="navbar-brand" href="/campgrounds">Serendipity!</a>
+        </div>
+        <div class="collapse navbar-collapse">
+         <ul class="nav navbar-nav navbar-right">
+            
+            <% if(!currentUser){ %>
+            <li><a href ="/login">Login</a></li>
+            <li><a href ="/register">SignUp</a></li>
+            <% } else { %>
+             <li><a href ="#">Welcome <%= currentUser.username %> </a></li>
+            <li><a href ="/logout">Logout</a></li>
+            <% } %>
+          
+        </ul>
+         
+        </div>
+   </div>
+</nav>
+
+<div class = "flash-messages">
+    <% if(error && error.length > 0){ %>
+    
+    <div class="alert alert-danger" id="alert-1" role="alert"><%= error %></div> 
+    <% } %>
+    <% if(success && success.length > 0){ %>
+    <div class="alert alert-success" id="alert-2" role="alert"><%= success %></div> 
+    <% } %>
+</div>
+
+  
