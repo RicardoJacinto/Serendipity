@@ -52,7 +52,10 @@ router.get("/campgrounds/:id", function(req,res){
 });
 
 router.post("/campgrounds", middleware.isLoggedIn, function(req,res){
-    
+     
+     console.log(req.body);
+     req.body.newDescription = req.sanitize(req.body.newDescription);
+     console.log(req.body);
     var campName = req.body.newCamp;
     var campImage = req.body.newImage;
     var campDescription = req.body.newDescription;

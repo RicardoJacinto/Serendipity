@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var flash = require("connect-flash");
+var expressSanitizer = require("express-sanitizer");
 
 var methodOverride = require("method-override");
 var seedDB = require("./seeds");
@@ -47,10 +48,13 @@ mongoose.connect("mongodb://localhost/serenpityV13", function(){
 
 //seedDB();
 
+
 // access ejs 
 app.set("view engine", "ejs");
 //Init bodyParser
 app.use(bodyParser.urlencoded({extended: true}));    
+//sanitizer - requirement - It needs to be after bodyParser
+app.use(expressSanitizer());
 app.use(express.static("public"));
 
 // access override
