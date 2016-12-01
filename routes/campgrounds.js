@@ -56,13 +56,14 @@ router.post("/campgrounds", middleware.isLoggedIn, function(req,res){
     var campName = req.body.newCamp;
     var campImage = req.body.newImage;
     var campDescription = req.body.newDescription;
+    var campPrice = req.body.newPrice;
     var author = {
         
         id : req.user._id,
         username : req.user.username
     };
     
-    var addedCamp = {name: campName, image: campImage, description: campDescription, author: author};
+    var addedCamp = {name: campName, image: campImage, description: campDescription, author: author, price: campPrice};
     
     Campground.create(addedCamp, function(err, newCamp){
         
