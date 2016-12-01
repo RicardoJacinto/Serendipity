@@ -57,13 +57,6 @@ $(window).bind("load", function() {
 });
 
 
-$(window).bind("load", function() {
-
-  $(".thumbnail-toggle").delay(1200).slideDown( 1400, function() {
-    // Animation complete.
-  });
-});
-
 //slide effects flash
 
 $(window).bind("load", function(e) {
