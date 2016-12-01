@@ -20,7 +20,8 @@ var campgroundSchema = new mongoose.Schema({
                 } ,
                 username: String
     },
-    price: String
+    price: String,
+    created: {type: Date, default: Date.now}
       
 });
 
