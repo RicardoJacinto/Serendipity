@@ -62,7 +62,22 @@ body{
  
 }
 
+
 /* Landing page */
+
+#fix-padding-landing{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#well-landing{
+    width:100%;
+  
+}
+
+.category-landing{
+    width: 100%
+}
 
 .title-landing{
     width: 100%;

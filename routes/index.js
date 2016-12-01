@@ -35,7 +35,7 @@ var passport = require("passport");
          }
          passport.authenticate("local")(req,res,function(){
              req.flash("success", "Welcome to yelpCamp " + user.username);
-             res.redirect("/campgrounds");
+             res.redirect("/");
              
          });
          
@@ -58,7 +58,7 @@ var passport = require("passport");
   
   {
     
-      successRedirect: "/campgrounds", 
+      successRedirect: "/", 
       failureRedirect: "/login",
       failureFlash: "Invalid username or password, please try again.",
       
@@ -73,7 +73,7 @@ router.get("/logout", function(req,res){
      
      req.logout();
      req.flash("success", "You have successfully logged out")
-     res.redirect("/campgrounds");
+     res.redirect("/");
     
 });
 
