@@ -39,11 +39,14 @@ app.use(require("express-session")({
 
 
 
+
+var url = process.env.DATABASEURL || "mongodb://localhost/yelpCampV11"
 // Connect Mongoose
-mongoose.connect("mongodb://localhost/serenpityV13", function(){
+mongoose.connect(url, function(){
     
     console.log("The database 'yelpCamp' was initialized");
 }); 
+
 
 
 //seedDB();
