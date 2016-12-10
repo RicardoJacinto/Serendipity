@@ -5,6 +5,10 @@ Project serendipity was created as a staple project, so that the employer can ac
 As a website, it consists of a platform that users can share their experiences with other users all over the world when it comes to a specific business type (hospitality, holidays, etc.).  When it comes to targeted locations associated with a specific business type, the content tends to be trendy, alternative or low cost. This creates the feeling of novelty and identity with the website’s image.
 The concept derives from the word “Serendipity” which means: “An aptitude for making desirable discoveries by accident” according to dictionary.com. Taking in consideration what was stated in the previous paragraph, the idea is to encourage the user to search the website for its alternative content in order to find that “desirable discovery by accident” hence the name for it.
 
+<h2> Login and register </h2>
+The registration system is case sensitive and only allows user registration if the input boxes contain some content. It doesn't allow users to have the same name and if that's the case an error message will display and request the user to try again.
+The login system is case sensitive too and checks if the name inserted matches the password. If it doesn’t, an error message will appear, asking for the user to try again.
+
 <h2> Technologies Used </h2>
 This website was developed with a wide range of technologies ranging all the way from html to node.js. 
 On the front-end side I used html, css, dom manipulation, javascript and even libraries like jQuery for animations. 
