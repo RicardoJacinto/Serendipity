@@ -12,9 +12,9 @@ On the back-end side technologies like node.js, express and NoSQL databases like
 The general assembly concept derives from the combination of node, express and mongo (MEN Software bundle).
 A further, more extensive list can be found in the package.json file provided. 
 
-<h2> Navigation and routes </h2>
+<h2> Navigation, routes and permissions</h2>
 The navigation was mapped and implemented using RESTful routing. Every user has the ability to create, edit and destroy (CRUD methodology) his posts and comments.
-Here is the concept table used for this project:
+Here is the concept table, with the respective http verbs and mongoose methods, used for this project:
 <table class="table table-hover table-bordered">
 			<thead>	
 				<tr>
@@ -77,3 +77,6 @@ Here is the concept table used for this project:
 				</tr>
 			</tbody>
 		</table>
+		
+The comment section shares the same behaviour used in the previous example. For demonstration purposes, only the campground section presented in the landing page is currently functional.
+As mentioned before, the user control system is implemented with CRUD. Users can add, edit and delete <strong> only </strong> their own post and <strong> no one else's</strong>.
