@@ -1,5 +1,7 @@
 <h1>Project Serendipity</h1>
 
+<h2> Check website @ <a href = "https://serendipity2.herokuapp.com"> Serendipity</a> </h2>
+
 <h2> Concept </h2>
 Project serendipity was created as a staple project, so that the employer can access my current level of programming skills and techniques. 
 As a website, it consists of a platform that users can share their experiences with other users all over the world when it comes to a specific business type (hospitality, holidays, etc.).  When it comes to targeted locations associated with a specific business type, the content tends to be trendy, alternative or low cost. This creates the feeling of novelty and identity with the website’s image.
